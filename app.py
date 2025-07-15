@@ -2,12 +2,15 @@ import cv2
 import streamlit as st
 import numpy as np
 from openai import OpenAI
+from dotenv import load_dotenv
 import os
 import requests
 
 from camera_input_live import camera_input_live
 
-OPENAI_API_KEY = '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'
+load_dotenv()
+
+OPENAI_API_KEY = os.getevn('OPENAI_API_KEY')
 
 def main():
     # st.title("Webcam Video Capture with Streamlit")
